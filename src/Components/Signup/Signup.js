@@ -11,13 +11,14 @@ export default function Signup() {
   const [userPassword,setUserPassword] = useState('')
 
  const handleSubmit = (event)=>{
-  event.prevent
+  event.preventDefault()
+  console.log(userEmail,userName,userPassword,userPhone)
  }
   return (
     <div>
       <div className="signupParentDiv">
         <img width="200px" height="200px" src={Logo}></img>
-        <form onSubmit={hanleSubmit}>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />
           <input
